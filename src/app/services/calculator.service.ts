@@ -45,4 +45,9 @@ export class CalculatorService {
     result.total = this.conversor.toCash(total)
     result.amount = amount
   }
+
+  public clean(coins: Coin[], result: Result): void {
+    coins.forEach((coin) => (coin.amount = 0))
+    this.setResult(coins, result)
+  }
 }

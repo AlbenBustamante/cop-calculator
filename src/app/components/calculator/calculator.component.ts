@@ -22,4 +22,8 @@ export class CalculatorComponent implements OnInit {
   public calculate(): void {
     this.service.setResult(this.coins, this.result)
   }
+
+  public clean(): void {
+    this.service.clean(this.coins, this.result)
+  }
 }
