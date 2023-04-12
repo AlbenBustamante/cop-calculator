@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core'
 import { Coin } from '../models/coin.model'
 import { Result } from '../models/result.model'
+import { Conversor } from '../utils/conversor'
 
 @Injectable({
   providedIn: 'root',
 })
 export class CalculatorService {
-  constructor() {}
+  constructor(private conversor: Conversor) {}
 
   public getDefaultCoins(): Coin[] {
     return [
@@ -26,5 +27,22 @@ export class CalculatorService {
 
   public getDefaultResult(): Result {
     return { amount: 0, total: '$ 0' }
+  }
+
+  public setResult(coins: Coin[], result: Result): void {
+    let total = 0
+    let amount = 0
+
+    coins.forEach((coin) => {
+      coin.total = this.conversor.toCash(
+        coin.amount * this.conversor.toNumber(coin.value)
+      )
+
+      total += this.conversor.toNumber(coin.total)
+      amount += coin.amount
+    })
+
+    result.total = this.conversor.toCash(total)
+    result.amount = amount
   }
 }
