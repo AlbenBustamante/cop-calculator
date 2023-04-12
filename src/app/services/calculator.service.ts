@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core'
 import { Coin } from '../models/coin.model'
+import { Result } from '../models/result.model'
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +8,7 @@ import { Coin } from '../models/coin.model'
 export class CalculatorService {
   constructor() {}
 
-  public getAll(): Coin[] {
+  public getDefaultCoins(): Coin[] {
     return [
       { name: 'hundredThousand', value: '$ 100.000', amount: 0, total: '$ 0' },
       { name: 'fiftyThousand', value: '$ 50.000', amount: 0, total: '$ 0' },
@@ -21,5 +22,9 @@ export class CalculatorService {
       { name: 'oneHundred', value: '$ 100', amount: 0, total: '$ 0' },
       { name: 'fifty', value: '$ 50', amount: 0, total: '$ 0' },
     ]
+  }
+
+  public getDefaultResult(): Result {
+    return { amount: 0, total: '$ 0' }
   }
 }

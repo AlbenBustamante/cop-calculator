@@ -12,7 +12,7 @@ export class Conversor {
       return 0
     }
 
-    return Number(value.split(prefix)[1].replace('.', ''))
+    return Number(value.split(prefix)[1].replaceAll('.', ''))
   }
 
   public toCash(value: number): string {

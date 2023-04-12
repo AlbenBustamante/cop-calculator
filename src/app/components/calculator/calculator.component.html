@@ -3,24 +3,27 @@
     <h1 class="text-3xl text-gray-800 text-center font-bold py-5">
       Calculadora
     </h1>
-    <form class="px-16">
+    <form class="px-16" (ngSubmit)="calculate()">
       <div class="flex" *ngFor="let coin of coins">
         <input
           type="text"
-          [value]="coin.value"
           class="text-right w-1/3 px-4 py-1 border-b border-slate-300"
+          [(ngModel)]="coin.value"
+          [name]="coin.name + 'Value'"
           disabled
         />
         <input
           type="number"
           min="0"
-          value="0"
           class="text-right w-1/3 py-1 border-b border-x border-slate-300"
+          [(ngModel)]="coin.amount"
+          [name]="coin.name"
         />
         <input
           type="text"
-          [value]="coin.total"
           class="text-right w-1/3 px-4 py-1 border-b border-slate-300"
+          [(ngModel)]="coin.total"
+          [name]="coin.name + 'Total'"
           disabled
         />
       </div>
@@ -34,14 +37,16 @@
         <input
           type="number"
           min="0"
-          value="0"
           class="text-right w-1/3 font-bold py-1 border-x border-slate-300"
+          [(ngModel)]="result.amount"
+          name="resultAmount"
           disabled
         />
         <input
           type="text"
-          value="$ 0"
           class="text-right w-1/3 font-bold px-4 py-1"
+          [(ngModel)]="result.total"
+          name="resultTotal"
           disabled
         />
       </div>

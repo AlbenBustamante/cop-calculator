@@ -6,12 +6,13 @@ import locale from '@angular/common/locales/es-CO'
 registerLocaleData(locale)
 
 import { AppRoutingModule } from './app-routing.module'
+import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component'
 import { CalculatorComponent } from './components/calculator/calculator.component'
 
 @NgModule({
   declarations: [AppComponent, CalculatorComponent],
-  imports: [BrowserModule, AppRoutingModule, MatIconModule],
+  imports: [BrowserModule, AppRoutingModule, MatIconModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
