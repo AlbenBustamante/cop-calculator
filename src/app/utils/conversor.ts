@@ -16,6 +16,6 @@ export class Conversor {
   }
 
   public toCash(value: number): string {
-    return `$ ${formatNumber(value, 'es-CO', '0')}`
+    return `$ ${formatNumber(value, 'es-CO')}`
   }
 }
