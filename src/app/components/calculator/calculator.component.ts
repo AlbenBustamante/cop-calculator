@@ -26,4 +26,8 @@ export class CalculatorComponent implements OnInit {
   public clean(): void {
     this.service.clean(this.coins, this.result)
   }
+
+  public swapVert(): void {
+    this.coins = this.coins.reverse()
+  }
 }
