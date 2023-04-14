@@ -7,7 +7,7 @@
       <div class="flex" *ngFor="let coin of coins">
         <input
           type="text"
-          class="text-right w-1/3 px-4 py-1 border-b border-slate-300"
+          class="text-right w-1/3 px-4 py-1 border-b border-slate-300 bg-white"
           [(ngModel)]="coin.value"
           [name]="coin.name + 'Value'"
           disabled
@@ -15,13 +15,13 @@
         <input
           type="number"
           min="0"
-          class="text-right w-1/3 py-1 border-b border-x border-slate-300"
+          class="text-right w-1/3 py-1 border-b border-x border-slate-300 bg-white"
           [(ngModel)]="coin.amount"
           [name]="coin.name"
         />
         <input
           type="text"
-          class="text-right w-1/3 px-4 py-1 border-b border-slate-300"
+          class="text-right w-1/3 px-4 py-1 border-b border-slate-300 bg-white"
           [(ngModel)]="coin.total"
           [name]="coin.name + 'Total'"
           disabled
@@ -31,20 +31,20 @@
         <input
           type="text"
           value="Total"
-          class="text-right w-1/3 font-bold px-4 py-1"
+          class="text-right w-1/3 font-bold px-4 py-1 bg-white"
           disabled
         />
         <input
           type="number"
           min="0"
-          class="text-right w-1/3 font-bold py-1 border-x border-slate-300"
+          class="text-right w-1/3 font-bold py-1 border-x border-slate-300 bg-white"
           [(ngModel)]="result.amount"
           name="resultAmount"
           disabled
         />
         <input
           type="text"
-          class="text-right w-1/3 font-bold px-4 py-1"
+          class="text-right w-1/3 font-bold px-4 py-1 bg-white"
           [(ngModel)]="result.total"
           name="resultTotal"
           disabled
