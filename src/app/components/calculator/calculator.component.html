@@ -13,11 +13,12 @@
           disabled
         />
         <input
-          type="number"
+          type="text"
           min="0"
-          class="text-right w-1/3 py-1 border-b border-x border-slate-300 bg-white"
+          class="text-right w-1/3 px-4 py-1 border-b border-x border-slate-300 bg-white placeholder-gray-400"
           [(ngModel)]="coin.amount"
           [name]="coin.name"
+          placeholder="0"
         />
         <input
           type="text"

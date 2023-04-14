@@ -1,6 +1,6 @@
 export interface Coin {
   value: string
-  amount: number
+  amount: string
   total: string
   name: string
 }
