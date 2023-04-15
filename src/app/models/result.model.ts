@@ -1,4 +1,4 @@
 export interface Result {
-  amount: number
+  amount: string
   total: string
 }
