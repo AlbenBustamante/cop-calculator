@@ -52,7 +52,7 @@ export class CalculatorService {
     })
 
     result.total = this.conversor.toCash(total)
-    result.amount = this.conversor.toCash(amount)
+    result.amount = `${amount}`
   }
 
   public clean(coins: Coin[], result: Result): void {
